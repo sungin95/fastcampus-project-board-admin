@@ -1,6 +1,7 @@
 package com.fastcampus.projectboardadmin.domain;
 
 import com.fastcampus.projectboardadmin.domain.constant.RoleType;
+import com.fastcampus.projectboardadmin.domain.converter.RoleTypesConverter;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -26,7 +27,7 @@ public class UserAccount extends AuditingFields {
 
     @Setter @Column(nullable = false) private String userPassword;
 
-    @Convert(converter = RoleType.class)
+    @Convert(converter = RoleTypesConverter.class)
     @Column(nullable = false)
     private Set<RoleType> roleTypes = new LinkedHashSet<>();
 
