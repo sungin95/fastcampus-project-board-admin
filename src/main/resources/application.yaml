@@ -14,9 +14,9 @@ server.port: 8081
 spring:
   devtools.livereload.port: 35730
   datasource:
-    url: ${MYSQL_DB_URL} # jdbc:mysql://localhost:3306/board
-    username: ${MYSQL_DB_USERNAME} # uno
-    password: ${MYSQL_DB_PASSWORD} # thisisTESTpw!#%& #
+    url: ${MYSQL_DB_URL}
+    username: ${MYSQL_DB_USERNAME}
+    password: ${MYSQL_DB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     open-in-view: false
@@ -52,4 +52,7 @@ project.board.url: http://localhost:8080
 spring:
   config.activate.on-profile: test
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:mysql://localhost:3306/admin
+    username: uno
+    password: thisisTESTpw!#%&
+    driver-class-name: com.mysql.cj.jdbc.Driver
