@@ -51,7 +51,7 @@ class ArticleManagementServiceTest {
 
         @DisplayName("게시글 API를 호출하면, 게시글을 가져온다.")
         @Test
-        void given_when_then() {
+        void givenNothing_whenCallingArticleApi_thenReturnsArticleList() {
             // Given
 
             // When
@@ -175,8 +175,6 @@ class ArticleManagementServiceTest {
         private UserAccountDto createUserAccountDto() {
             return UserAccountDto.of(
                     "unoTest",
-                    "pw",
-                    Set.of(RoleType.ADMIN),
                     "uno-test@email.com",
                     "uno-test",
                     "test memo"
