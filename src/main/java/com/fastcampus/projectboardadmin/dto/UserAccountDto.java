@@ -25,20 +25,4 @@ public record UserAccountDto(
         return new UserAccountDto(userId, roleTypes, email, nickname, memo, createdAt, createdBy, modifiedAt, modifiedBy);
     }
 
-    public static UserAccountDto from(AdminAccount entity) {
-        return new UserAccountDto(
-                entity.getUserId(),
-                entity.getRoleTypes(),
-                entity.getEmail(),
-                entity.getNickname(),
-                entity.getMemo(),
-                entity.getCreatedAt(),
-                entity.getCreatedBy(),
-                entity.getModifiedAt(),
-                entity.getModifiedBy()
-        );
-    }
-
-
-
 }
