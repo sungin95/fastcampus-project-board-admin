@@ -36,7 +36,7 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 @DisplayName("비즈니스 로직 -게시글 관리")
 class ArticleManagementServiceTest {
 
-    //    @Disabled("실제 API 호출 결과 관찰용이므로 평상시엔 비활성화")
+    @Disabled("실제 API 호출 결과 관찰용이므로 평상시엔 비활성화")
     @DisplayName("실제 API 호출 테스트")
     @SpringBootTest
     @Nested
@@ -67,7 +67,7 @@ class ArticleManagementServiceTest {
     @DisplayName("API mocking 테스트")
     @EnableConfigurationProperties(ProjectProperties.class)
     @AutoConfigureWebClient(registerRestTemplate = true)
-    @RestClientTest(ArticleManagementServiceTest.class)
+    @RestClientTest(ArticleManagementService.class)
     @Nested
     class RestTemplateTest {
 
@@ -112,7 +112,7 @@ class ArticleManagementServiceTest {
                     .hasFieldOrPropertyWithValue("id", expectedArticle.id())
                     .hasFieldOrPropertyWithValue("title", expectedArticle.title())
                     .hasFieldOrPropertyWithValue("content", expectedArticle.content())
-                    .hasFieldOrPropertyWithValue("userAccount.nickname", expectedArticle.userAccount());
+                    .hasFieldOrPropertyWithValue("userAccount.nickname", expectedArticle.userAccount().nickname());
             server.verify();
         }
 
