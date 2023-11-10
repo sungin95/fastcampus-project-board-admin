@@ -39,5 +39,4 @@ https://43.201.67.85.nip.io
 
 ## Reference
 
-* 유즈케이스 다이어그램: https://app.diagrams.net/?src=about#Hsungin95%2Ffastcampus-project-board%2Fmain%2Fdocument%2Fuse-case.svg
-* API Endpoint 구글 시트: [#1](https://github.com/djkeh/fastcampus-project-board/issues/1), https://docs.google.com/spreadsheets/d/1S2FW7_LlePGF95strSYFJEsEQKoyZ9nGHWM8wZgFmSU/edit?usp=sharing
+* 게시판 서비스: https://43.201.67.85.nip.io
